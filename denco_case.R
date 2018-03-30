@@ -46,7 +46,7 @@ str(df3)
 
 #dplyr
 names(sales)
-
+e
 library(dplyr)
 
 sales %>% dplyr::filter(margin > 1000000)
@@ -55,7 +55,7 @@ names(sales)
 sales %>% group_by(region) %>% 
 summarize(Revenuesum= sum(revenue)) %>% arrange(desc(Revenuesum))
 sales%>% filter(margin>100000 )%>% arrange(region,desc(revenue))
-sales %>% filter(region=='01-East'& revenue>400000) %>% select(partnum,region,revenue)
+sales %>% filtr(region=='01-East'& revenue>400000) %>% select(partnum,region,revenue)
 library(data.table)
 dt1 = as.data.table(sales)
 dt2 = dt1[, sum(revenue), by=custname]
